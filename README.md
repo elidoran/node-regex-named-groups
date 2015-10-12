@@ -35,18 +35,20 @@ string1 = '1st group blah 2nd group ignored group 3rd group'
 result = enhancedRegex.exec string1
 
 # result has the capture groups mapped to their names
-result.first  = '1st group' # was as result[1]
-result.second = '2nd group' # was as result[2]
-result.third  = '3rd group' # was as result[3]
+result.first  = '1st group' # was result[1]
+result.second = '2nd group' # was result[2]
+result.third  = '3rd group' # was result[3]
 
-# preserve values usually provided by providing an options object
+# to preserve array result specify `preserve` in options object
+enhancedRegex = captureNames regex, names, preserve:true
+# OR: put all of them in an options object:
 enhancedRegex = captureNames
   regex:regex
   names:names
   preserve:true # preserves the usual array returned by exec()
 
 # the values are prefixed with a dollar sign to avoid name conflicts
-result.array = # the usual result returned by exec
+result.$array = # the usual result returned by exec()
 ```
 
 ## MIT License

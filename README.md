@@ -47,7 +47,7 @@ enhancedRegex = captureNames
   names:names
   preserve:true # preserves the usual array returned by exec()
 
-# the values are prefixed with a dollar sign to avoid name conflicts
+# the key is prefixed with a dollar sign to avoid name conflicts
 result.$array = # the usual result returned by exec()
 ```
 
